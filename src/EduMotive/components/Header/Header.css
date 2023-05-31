@@ -1,0 +1,176 @@
+header {
+  width: 100%;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  z-index: 888;
+}
+
+header .logoContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+header .logoContainer img {
+  width: 8rem;
+}
+
+header .logoContainer span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 1.5px;
+}
+header .logoContainer span span {
+  color: var(--radical-red);
+}
+
+header .navlist {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+header .navlist a {
+  font-size: var(--bodyTxt);
+}
+
+header .navlist a:is(:hover, :focus) {
+  color: var(--kappel);
+}
+
+header .ibContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  color: var(--black-1);
+  align-items: center;
+}
+
+header .ibContainer i {
+  display: inline-block;
+  cursor: pointer;
+  font-size: var(--bodyTxt);
+}
+
+header .ibContainer i:is(:hover, :focus) {
+  color: var(--kappel);
+}
+
+/* header .ibContainer .search {
+  position: relative;
+} */
+header .ibContainer .search .searchInput {
+  position: absolute;
+  top: 110%;
+  right: -50rem;
+  width: 400px;
+  z-index: 10000;
+  box-shadow: var(--shadow-1);
+  border: 0.3rem solid #eee;
+  padding: 0.8rem 1rem;
+  border-radius: var(--rad-5);
+  background-color: var(--white);
+}
+
+header .ibContainer .search .searchInput.activ {
+  right: 3rem;
+}
+
+header .ibContainer .cart {
+  position: relative;
+}
+
+header .ibContainer .cart span {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  min-width: 20px;
+  height: 20px;
+  font-size: 1.5rem;
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+header .ibContainer .navbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .ibContainer .fa-bars {
+  display: none;
+}
+
+/* Drawer Designing */
+
+.fa-circle-xmark {
+  font-size: var(--heading);
+  cursor: pointer;
+}
+
+.navlistDrawer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  gap: 1.5rem;
+}
+
+.navlistDrawer a {
+  font-size: var(--bodyTxt);
+  font-weight: 500;
+}
+
+.navlistDrawer a:is(:hover, :focus) {
+  color: var(--kappel);
+}
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+  header .ibContainer .fa-bars {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  header .navlist {
+    display: none;
+  }
+
+  header .ibContainer .navbtn {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  header .ibContainer .search .searchInput {
+    width: 80%;
+  }
+}
+
+@media (max-width: 305px) {
+  header .logoContainer {
+    gap: 0.5rem;
+  }
+  header .logoContainer span {
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+  header .ibContainer {
+    gap: 1rem;
+  }
+}

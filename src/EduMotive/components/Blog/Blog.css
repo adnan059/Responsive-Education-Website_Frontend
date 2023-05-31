@@ -1,0 +1,130 @@
+.blog {
+  background: url("../../assets/images/blog-bg.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0 8rem 0;
+}
+
+.blogContainer {
+  margin-top: 5rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 365px);
+
+  gap: 3.5rem;
+}
+
+.blogContainer .blogBox .blogImg {
+  max-width: 100%;
+  z-index: 10;
+  position: relative;
+  border-radius: var(--rad-10);
+}
+
+.blogContainer .blogBox .blogImg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--black_50);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: var(--rad-10);
+  transition: 0.2s all linear;
+}
+
+.blogContainer .blogBox:is(:hover, :focus-within) .blogImg::after {
+  opacity: 1;
+}
+
+.blogContainer .blogBox .blogImg img {
+  display: block;
+  z-index: 10;
+  max-width: 100%;
+  border-radius: var(--rad-10);
+}
+
+.blogContainer .blogBox .blogContent {
+  position: relative;
+  width: 90%;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  margin-top: -10rem;
+  z-index: 15;
+  padding: 1.3rem;
+  border-radius: var(--rad-10);
+}
+
+.blogContainer .blogBox .blogContent .arrow {
+  width: 60px;
+  height: 60px;
+  background-color: var(--radical-red);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  opacity: 0;
+  transition: 0.2s all linear;
+  cursor: pointer;
+}
+
+.blogContainer .blogBox:hover .blogContent .arrow {
+  opacity: 1;
+}
+
+.blogContainer .blogBox .blogContent .arrow i {
+  font-size: 2rem;
+}
+
+.blogContainer .blogBox .blogContent .blogStatus {
+  font-size: var(--bbTxt);
+}
+
+.blogContainer .blogBox .blogContent .blogTitle {
+  font-size: var(--cardHeading);
+  color: var(--black-1);
+  font-weight: 500;
+}
+
+.blogContainer .blogBox .blogContent .blogInfo {
+  margin: 1.3rem 0;
+}
+
+.blogContainer .blogBox .blogContent .blogInfo span {
+  font-size: var(--bbbTxt);
+}
+
+.blogContainer .blogBox .blogContent .blogInfo span:nth-of-type(1) {
+  margin-right: 2rem;
+}
+
+.blogContainer .blogBox .blogContent .blogInfo i {
+  margin-right: 0.8rem;
+  color: var(--kappel);
+}
+
+.blogContainer .blogBox .blogContent .blogDesc {
+  font-size: var(--bbTxt);
+  color: #333;
+}
+
+/* ************************************************************** */
+
+@media (max-width: 1220px) {
+  .blogContainer {
+    grid-template-columns: repeat(2, minmax(290px, 365px));
+  }
+}
+
+@media (max-width: 768px) {
+  .blogContainer {
+    grid-template-columns: repeat(1, minmax(275px, 365px));
+  }
+}

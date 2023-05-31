@@ -1,0 +1,117 @@
+.about.sectionContainer {
+  padding-top: 10rem;
+}
+
+.aboutWrapper {
+  max-width: 100%;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(275px, 600px));
+  gap: 3rem;
+}
+
+.aboutWrapper .leftAbout {
+  height: max-content;
+  position: relative;
+}
+
+.aboutWrapper .leftAbout > img {
+  display: block;
+}
+
+.aboutWrapper .leftAbout .aboutBannerImg {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.aboutWrapper .leftAbout .aboutBannerImg img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  position: relative;
+  z-index: 10;
+  border-radius: 20px;
+}
+
+.aboutWrapper .leftAbout .as1 {
+  position: absolute;
+  top: -10rem;
+  right: -5rem;
+  width: 300px;
+  z-index: 15;
+}
+
+.aboutWrapper .leftAbout .as2 {
+  position: absolute;
+  bottom: -10rem;
+  left: -5rem;
+  z-index: 15;
+}
+
+.aboutWrapper .leftAbout .as3 {
+  position: absolute;
+  top: -10rem;
+  left: -6rem;
+  z-index: 5;
+  width: 722px;
+  height: 528px;
+}
+
+/* ================================================================ */
+
+.aboutWrapper .rightAbout p {
+  margin: 2rem 0;
+  font-size: var(--bodyTxt);
+}
+
+.aboutWrapper .rightAbout ul li {
+  font-size: var(--bbTxt);
+}
+
+.aboutWrapper .rightAbout ul li i {
+  margin-right: 1.5rem;
+  color: goldenrod;
+}
+
+/* ================================================================ */
+
+@media (max-width: 1130px) {
+  .aboutWrapper {
+    grid-template-columns: repeat(1, minmax(275px, 600px));
+
+    align-items: center;
+    gap: 2rem;
+  }
+  .aboutWrapper .aboutBannerImg img {
+    margin: 0 auto;
+  }
+
+  .aboutWrapper .rightAbout {
+    margin-top: 12rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .about.sectionContainer {
+    padding-top: 6rem;
+  }
+  .aboutWrapper .leftAbout .as3 {
+    display: none;
+  }
+  .aboutWrapper .leftAbout .as1 {
+    display: none;
+  }
+
+  .aboutWrapper .rightAbout {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutWrapper .leftAbout .as2 {
+    width: 60%;
+    bottom: -4rem;
+  }
+}

@@ -1,0 +1,86 @@
+.courses {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  background-color: var(--isabelline);
+  padding-top: 10rem;
+}
+.courseContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  text-align: center;
+  width: 100%;
+  gap: 2.5rem;
+  margin: 4.5rem 0;
+}
+
+.courseContainer .courseBox {
+  padding: 4rem 2rem;
+  background-color: var(--white);
+  border-radius: var(--rad-5);
+}
+
+.courseContainer .courseBox .courseImage {
+  overflow: hidden;
+  border-radius: var(--rad-5);
+  margin-bottom: 2.2rem;
+  max-width: 100%;
+}
+.courseContainer .courseBox .courseImage img {
+  display: block;
+  transition: 0.4s transform;
+  margin: 0 auto;
+  border-radius: var(--rad-5);
+  max-width: 100%;
+}
+
+.courseContainer .courseBox .courseImage:hover img {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+.courseContainer .courseBox .courseBoxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.courseContainer .courseBox .courseBoxContent .level {
+  background-color: var(--kappel_15);
+  color: var(--kappel);
+  font-size: var(--bbbTxt);
+  font-weight: 500;
+  width: 250px;
+  margin: 0 auto;
+  padding: 3px 0;
+}
+
+.courseContainer .courseBox .courseBoxContent .courseTitle {
+  color: var(--black-1);
+  font-weight: 500;
+  font-size: var(--cardHeading);
+}
+
+.courseContainer .courseBox .courseBoxContent .stars {
+  color: var(--kappel);
+}
+
+.courseContainer .courseBox .courseBoxContent .price {
+  color: var(--radical-red);
+  font-size: var(--bodyTxt);
+}
+
+.courseContainer .courseBox .courseBoxContent .info {
+  font-size: var(--bbbTxt);
+}
+
+.courses .btn {
+  display: block;
+  margin: 7rem auto 0 auto;
+  font-weight: 500;
+}
+
+@media (max-width: 450px) {
+  .courseContainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

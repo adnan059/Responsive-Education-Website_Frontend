@@ -1,0 +1,197 @@
+.hero {
+  padding: 10rem;
+  margin-top: 5rem;
+  background: url("../../assets/images/hero-bg.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 150px);
+}
+
+.hero .heroContainer {
+  width: 100%;
+  margin: 0 auto;
+  /* background-color: bisque; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+.hero .heroContainer .heroLeft {
+  flex: 0 0 45rem;
+  /* background-color: pink; */
+}
+.hero .heroContainer .heroRight {
+  flex: 0 0 70rem;
+
+  /* background-color: rgb(186, 235, 186); */
+}
+
+.hero .heroContainer .heroLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero .heroContainer .heroLeft .heroTitle {
+  font-size: var(--bannerHeading);
+  font-weight: 700;
+  color: var(--black-1);
+}
+
+.hero .heroContainer .heroLeft .heroTitle span {
+  color: var(--radical-red);
+}
+
+.hero .heroContainer .heroLeft .heroSubTitle {
+  font-size: var(--subHeading);
+  color: var(--black-1);
+}
+
+.hero .heroContainer .heroLeft .btn {
+  width: 30rem;
+}
+
+/* Hero Right */
+
+.hero .heroContainer .heroRight {
+  position: relative;
+  height: 90%;
+}
+
+.hero .heroContainer .heroRight img {
+  display: block;
+}
+
+.hero .heroContainer .heroRight .hs2 {
+  width: 95%;
+  position: absolute;
+  top: -5%;
+  left: 4%;
+}
+
+.hero .heroContainer .heroRight .hb1 {
+  width: 270px;
+  border-radius: 0 30% 0 30%;
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  z-index: 99;
+}
+
+.hero .heroContainer .heroRight .hb2 {
+  width: 260px;
+  border-radius: 30% 0% 30% 0%;
+  object-fit: cover;
+  position: absolute;
+  left: 45%;
+  top: 25%;
+  z-index: 99;
+}
+
+.hero .heroContainer .heroRight .hs1 {
+  position: absolute;
+  top: 60%;
+  z-index: 105;
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+  .hero .heroContainer .heroLeft {
+    flex: 50%;
+  }
+  .hero .heroContainer .heroRight {
+    flex: 50%;
+  }
+
+  .hero .heroContainer .heroRight .hs2 {
+    display: none;
+  }
+
+  .hero .heroContainer .heroRight .hb1 {
+    width: 42%;
+    left: 10%;
+  }
+
+  .hero .heroContainer .heroRight .hb2 {
+    width: 42%;
+    left: 55%;
+  }
+
+  .hero .heroContainer .heroRight .hs1 {
+    top: 55%;
+    width: 70%;
+    transform: translateY(-10%);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 8rem;
+    height: 130vh;
+  }
+  .hero .heroContainer {
+    flex-wrap: wrap;
+  }
+
+  .hero .heroContainer .heroLeft {
+    /* background-color: pink; */
+    flex: 0 0 100%;
+    text-align: center;
+  }
+
+  .hero .heroContainer .heroLeft .btn {
+    margin: 0 auto;
+  }
+
+  .hero .heroContainer .heroRight {
+    flex: 0 0 100%;
+  }
+
+  .hero .heroContainer .heroRight .hb1 {
+    width: 35%;
+    left: 30%;
+    transform: translateX(-50%);
+  }
+  .hero .heroContainer .heroRight .hb2 {
+    width: 35%;
+    right: 30%;
+  }
+
+  .hero .heroContainer .heroRight .hs1 {
+    width: 60%;
+    top: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+  .hero .heroContainer .heroRight .hs1 {
+    display: none;
+  }
+
+  .hero .heroContainer .heroRight {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero .heroContainer .heroRight .hb1 {
+    width: 50%;
+    position: static;
+    display: block;
+    transform: translate(0);
+  }
+  .hero .heroContainer .heroRight .hb2 {
+    width: 50%;
+    position: static;
+    display: block;
+  }
+}

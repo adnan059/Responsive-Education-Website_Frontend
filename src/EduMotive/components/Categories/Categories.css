@@ -1,0 +1,126 @@
+.categories .catIntro {
+  text-align: center;
+  font-size: var(--bodyTxt);
+  margin-top: 1.5rem;
+  color: var(--gray-web);
+}
+
+.categories .catContainer {
+  margin-top: 5rem;
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.categories .catContainer .catBox {
+  background-color: rgb(252, 215, 171);
+  text-align: center;
+  text-transform: capitalize;
+  padding: 2rem 0;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categories .catContainer .catBox .catImage {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories .catContainer .catBox .catTitle {
+  font-size: var(--cardHeading);
+  font-weight: 500;
+  margin: 2.5rem 0;
+  color: var(--black-1);
+}
+
+.categories .catContainer .catBox .catDesc {
+  font-size: var(--bbTxt);
+  margin-bottom: 2.5rem;
+  color: var(--black-1);
+}
+
+.categories .catContainer .catBox:nth-of-type(1) {
+  background-color: #e8f7f5;
+}
+
+.categories .catContainer .catBox:nth-of-type(2) {
+  background-color: #fdecef;
+}
+
+.categories .catContainer .catBox:nth-of-type(3) {
+  background-color: #eceffc;
+}
+
+.categories .catContainer .catBox:nth-of-type(4) {
+  background-color: #fef7e8;
+}
+
+/***************************/
+
+.categories .catContainer .catBox:nth-of-type(1) .catImage {
+  background-color: #d3f0ec;
+}
+
+.categories .catContainer .catBox:nth-of-type(2) .catImage {
+  background-color: #fbdbe1;
+}
+
+.categories .catContainer .catBox:nth-of-type(3) .catImage {
+  background-color: #dbe1f9;
+}
+
+.categories .catContainer .catBox:nth-of-type(4) .catImage {
+  background-color: #fdf0d3;
+}
+
+/* ///////////*******\\\\\\\\\\\\\\ */
+
+.categories .catContainer .catBox .courses {
+  background-color: skyblue;
+  width: 150px;
+  margin: 0 auto;
+  padding: 0.2rem;
+  font-weight: 600;
+  border-radius: var(--rad-3);
+}
+
+.categories .catContainer .catBox:nth-of-type(1) .courses {
+  color: #1ab7b1;
+  background-color: #d3f0ec;
+}
+
+.categories .catContainer .catBox:nth-of-type(2) .courses {
+  color: #f16462;
+  background-color: #fbdbe1;
+}
+
+.categories .catContainer .catBox:nth-of-type(3) .courses {
+  color: #4e61e4;
+  background-color: #dbe1f9;
+}
+
+.categories .catContainer .catBox:nth-of-type(4) .courses {
+  color: #fac637;
+  background-color: #fdf0d3;
+}
+
+@media (max-width: 1100px) {
+  .categories .catContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 615px) {
+  .categories .catContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
